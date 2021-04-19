@@ -1,0 +1,14 @@
+{
+  // Use IntelliSense para saber los atributos posibles.
+  // Mantenga el puntero para ver las descripciones de los existentes atributos.
+  // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-msedge",
+      "request": "launch",
+      "name": "Open error-page.component.html",
+      "file": "d:\\01_RepositoriosCursos\\Curso Angular 2021\\Angular\\05-heroesApp\\src\\app\\shared\\error-page\\error-page.component.html"
+    }
+  ]
+}

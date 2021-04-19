@@ -1,1 +1,38 @@
-<p>listado works!</p>
+<h1>Listado de Heroes</h1>
+<br />
+<!-- Quiero que sea un row  -->
+<mat-grid-list cols="1" *ngIf="!heroes; else divHeroes">
+  <mat-grid-tile>
+    <mat-spinner></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divHeroes>
+<div fxLayout="row wrap"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="20px"
+>
+  <!-- Establesco el % de visualización -->
+  <div fxFlex="20"
+       fxFlex.lg="15"
+       fxFlex.sm="30"
+       *ngFor="let heroe of heroes"
+  >
+    <app-heroe-tarjeta [heroe]="heroe"></app-heroe-tarjeta>
+  </div>
+</div>
+</ng-template>
+
+
+<!-- 
+  fxLayoutAlign : centrado
+  fxLayoutGap : separación de elementos
+  Responsive --------
+  fxFlex.lg ="15"
+  en el comoponente padre puedo cambiar el row por column en pantallas pequeñas
+  fxLayout.xs = "column"
+  [heroe]="heroe"  
+  Donde [heroe] -- es el nombre de la variable que voy a enviar al componente
+      y  "heroe" es el valor que enviamos en este caso sacadoi del ngfor 
+  -->
