@@ -10,7 +10,7 @@ export class ImagenPipe implements PipeTransform {
   transform(heroe: Heroe): string{
     let path ="assets";
 
-    console.log('Pipe imagen se proceso');
+    // console.log('Pipe imagen se proceso');
     // si el id no existe y tampoco alt_img
     if ( !heroe.id && !heroe.alt_img ) {
       return `${path}/no-image.png`;
